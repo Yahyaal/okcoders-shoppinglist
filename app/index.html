@@ -6,14 +6,14 @@
 
 <body>
 	<h1><center> Shopping List</center></h1>
-	<div id='list'>Our items will apear here</div>
+	<div id='listcontainer'>Our items will apear here</div>
 
 </body>
 
 <script type="text/javascript">
-	$.get('/list', function(items) {	//items is an array
+	$.get('/listitems', function(items) {	//items is an array
 		console.log('list =', items);
-		$('#list').text(items.join(', '));	//set the text of #list to the
+		$('#listcontainer').text(items.join(', '));	//set the text of #list to the
 											//concatenated items  Array
 	});
 </script>
