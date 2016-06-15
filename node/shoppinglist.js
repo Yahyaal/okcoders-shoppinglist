@@ -12,3 +12,7 @@ app.use('/', express.static('./app'));	// serve our static HTML files
 app.get('/listitems', function(req, res) {
 	res.json([1,2,3]);
 });
+
+app.get('/users', function(req, res) {
+	res.json(['yahya','adam','mark']);
+});

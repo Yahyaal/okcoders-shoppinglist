@@ -7,6 +7,7 @@
 <body>
 	<h1><center> Shopping List</center></h1>
 	<div id='listcontainer'>Our items will apear here</div>
+	<div id='usercontainer'>Our users will apear here</div>
 
 </body>
 
@@ -15,6 +16,10 @@
 		console.log('list =', items);
 		$('#listcontainer').text(items.join(', '));	//set the text of #list to the
 											//concatenated items  Array
+	});
+
+	$.get('/users', function(users) {
+		$('#usercontainer').text(users.join(', '));
 	});
 </script>
 
