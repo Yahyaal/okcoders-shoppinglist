@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Shopping List App</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</head>
+
+<body>
+	<h1><center> Shopping List</center></h1>
+	<div id='list'>Our items will apear here</div>
+
+</body>
+
+<script type="text/javascript">
+	$.get('/list', function(items) {	//items is an array
+		console.log('list =', items);
+		$('#list').text(items.join(', '));	//set the text of #list to the
+											//concatenated items  Array
+	});
+</script>
+
+</html>
